@@ -14,6 +14,7 @@
 		502BBB811ECCDC5700D24E36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502BBB7F1ECCDC5700D24E36 /* LaunchScreen.storyboard */; };
 		502BBB8C1ECCDC5700D24E36 /* simpleClockBoxingV1_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBB8B1ECCDC5700D24E36 /* simpleClockBoxingV1_1Tests.swift */; };
 		502BBB971ECCDC5700D24E36 /* simpleClockBoxingV1_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBB961ECCDC5700D24E36 /* simpleClockBoxingV1_1UITests.swift */; };
+		502BBBA51ECCDCBB00D24E36 /* BoxingClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBBA41ECCDCBB00D24E36 /* BoxingClockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		502BBB921ECCDC5700D24E36 /* simpleClockBoxingV1.1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleClockBoxingV1.1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		502BBB961ECCDC5700D24E36 /* simpleClockBoxingV1_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleClockBoxingV1_1UITests.swift; sourceTree = "<group>"; };
 		502BBB981ECCDC5700D24E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		502BBBA41ECCDCBB00D24E36 /* BoxingClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxingClockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				502BBB761ECCDC5700D24E36 /* AppDelegate.swift */,
 				502BBB781ECCDC5700D24E36 /* ViewController.swift */,
+				502BBBA41ECCDCBB00D24E36 /* BoxingClockView.swift */,
 				502BBB7A1ECCDC5700D24E36 /* Main.storyboard */,
 				502BBB7D1ECCDC5700D24E36 /* Assets.xcassets */,
 				502BBB7F1ECCDC5700D24E36 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			files = (
 				502BBB791ECCDC5700D24E36 /* ViewController.swift in Sources */,
 				502BBB771ECCDC5700D24E36 /* AppDelegate.swift in Sources */,
+				502BBBA51ECCDCBB00D24E36 /* BoxingClockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
