@@ -62,7 +62,7 @@ class ViewController: UIViewController, ClockDelegate, BoxingClockDelegate {
         brainClock.start()
         brainClock.delegate = self
         addViewToSuperView()
-    
+        
     }
     
     private func addViewToSuperView() {
@@ -70,7 +70,6 @@ class ViewController: UIViewController, ClockDelegate, BoxingClockDelegate {
         boxingClockView = GenericObjects.boxingView(view.frame)
         boxingClockView.delegate = self
         view.addSubview(boxingClockView)
-        
         
     }
     
