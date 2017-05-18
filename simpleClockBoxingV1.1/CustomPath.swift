@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 struct CustomPath {
     
     static let twoLines: (CGRect) -> UIBezierPath = { (bounds: CGRect) in

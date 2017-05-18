@@ -8,16 +8,28 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ClockDelegate, BoxingClockDelegate {
     
-    var boxingClockView: BoxingClockView! {
-        return createBoxingView()
+    let brainClock = BrainClock()
+    
+    var boxingClockView: BoxingClockView!
+    
+    var clockLabel: CustomLabel {
+        
+        return boxingClockView.getLabel()
+        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        
+        return .lightContent
+        
     }
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        self.view.addSubview(boxingClockView)
+        setup()
         
     }
     
@@ -27,24 +39,51 @@ class ViewController: UIViewController {
         
     }
     
-    func createBoxingView() -> BoxingClockView {
+    func updatedTime() {
         
-        let newView = BoxingClockView(frame: self.view.frame)
-        newView.tag = TagView.main.value
-        
-        return newView
+        clockLabel.text = brainClock.time
         
     }
     
-    func redrawView() {
+    func buttonPauseIsPressed() {
         
-        if let view = self.view.viewWithTag(TagView.main.value) {
-            view.removeFromSuperview()
-            self.view.addSubview(boxingClockView)
+        brainClock.pauseTime()
+        
+    }
+    
+    func buttonStopIsPressed() {
+        
+        brainClock.stopTime()
+        
+    }
+    
+    private func setup() {
+    
+        brainClock.start()
+        brainClock.delegate = self
+        addViewToSuperView()
+    
+    }
+    
+    private func addViewToSuperView() {
+        
+        boxingClockView = GenericObjects.boxingView(view.frame)
+        boxingClockView.delegate = self
+        view.addSubview(boxingClockView)
+        
+        
+    }
+    
+    private func redrawView() {
+        
+        if let myView = view.viewWithTag(TagView.main.value) {
+            
+            myView.removeFromSuperview()
+            addViewToSuperView()
             
         }
         
     }
-
+    
 }
 

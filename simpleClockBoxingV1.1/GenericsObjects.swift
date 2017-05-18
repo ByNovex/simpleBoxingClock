@@ -52,5 +52,13 @@ struct GenericObjects {
         
     }
     
+    static let boxingView: (CGRect) -> BoxingClockView = { (frame) in
+        
+        let newView = BoxingClockView(frame: frame)
+        newView.tag = TagView.main.value
+        
+        return newView
+        
+    }
     
 }

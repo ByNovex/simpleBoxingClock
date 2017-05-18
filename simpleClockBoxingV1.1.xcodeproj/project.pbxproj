@@ -19,9 +19,9 @@
 		502BBBA91ECE045B00D24E36 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBBA81ECE045B00D24E36 /* ColorStyle.swift */; };
 		502BBBAB1ECE04C400D24E36 /* CustomPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBBAA1ECE04C400D24E36 /* CustomPath.swift */; };
 		502BBBAD1ECE083300D24E36 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBBAC1ECE083300D24E36 /* CustomButton.swift */; };
-		502BBBAF1ECE096700D24E36 /* ButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBBAE1ECE096700D24E36 /* ButtonDelegate.swift */; };
 		502BBBB31ECE194A00D24E36 /* GenericsObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBBB21ECE194A00D24E36 /* GenericsObjects.swift */; };
 		502BBBB51ECE19DD00D24E36 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBBB41ECE19DD00D24E36 /* CustomLabel.swift */; };
+		502BBBB71ECE204900D24E36 /* BrainClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBBB61ECE204900D24E36 /* BrainClock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +60,9 @@
 		502BBBA81ECE045B00D24E36 /* ColorStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
 		502BBBAA1ECE04C400D24E36 /* CustomPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPath.swift; sourceTree = "<group>"; };
 		502BBBAC1ECE083300D24E36 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		502BBBAE1ECE096700D24E36 /* ButtonDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonDelegate.swift; sourceTree = "<group>"; };
 		502BBBB21ECE194A00D24E36 /* GenericsObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericsObjects.swift; sourceTree = "<group>"; };
 		502BBBB41ECE19DD00D24E36 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomLabel.swift; path = ../CustomLabel.swift; sourceTree = "<group>"; };
+		502BBBB61ECE204900D24E36 /* BrainClock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrainClock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				502BBB761ECCDC5700D24E36 /* AppDelegate.swift */,
+				502BBBB61ECE204900D24E36 /* BrainClock.swift */,
 				502BBB781ECCDC5700D24E36 /* ViewController.swift */,
 				502BBBA41ECCDCBB00D24E36 /* BoxingClockView.swift */,
 				502BBBB21ECE194A00D24E36 /* GenericsObjects.swift */,
@@ -122,7 +123,6 @@
 				502BBBA61ECE035700D24E36 /* CustomShapeLayer.swift */,
 				502BBBAA1ECE04C400D24E36 /* CustomPath.swift */,
 				502BBBA81ECE045B00D24E36 /* ColorStyle.swift */,
-				502BBBAE1ECE096700D24E36 /* ButtonDelegate.swift */,
 				502BBB7A1ECCDC5700D24E36 /* Main.storyboard */,
 				502BBB7D1ECCDC5700D24E36 /* Assets.xcassets */,
 				502BBB7F1ECCDC5700D24E36 /* LaunchScreen.storyboard */,
@@ -294,8 +294,8 @@
 				502BBBAB1ECE04C400D24E36 /* CustomPath.swift in Sources */,
 				502BBBAD1ECE083300D24E36 /* CustomButton.swift in Sources */,
 				502BBBA91ECE045B00D24E36 /* ColorStyle.swift in Sources */,
-				502BBBAF1ECE096700D24E36 /* ButtonDelegate.swift in Sources */,
 				502BBBA51ECCDCBB00D24E36 /* BoxingClockView.swift in Sources */,
+				502BBBB71ECE204900D24E36 /* BrainClock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

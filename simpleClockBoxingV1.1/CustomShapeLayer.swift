@@ -9,14 +9,14 @@
 import UIKit
 
 
-protocol CustomDesignable {
+protocol LayerDesignable {
     
     func setupLayer()
-    func createCustomPath() -> CGPath
+    func createCustomPathForDesing() -> CGPath
     
 }
 
-class CustomPauseLayer: CustomShapeLayer, CustomDesignable {
+class CustomPauseLayer: CustomShapeLayer, LayerDesignable {
     
     override init(bounds: CGRect) {
         
@@ -39,13 +39,13 @@ class CustomPauseLayer: CustomShapeLayer, CustomDesignable {
     
     func setupLayer() {
         
-        path = createCustomPath()
+        path = createCustomPathForDesing()
         lineWidth = bounds.width / 10
         strokeColor = ColorStyle.text.color.cgColor
         
     }
     
-    func createCustomPath() -> CGPath {
+    func createCustomPathForDesing() -> CGPath {
         
         return CustomPath.twoLines(bounds).cgPath
         
@@ -54,7 +54,7 @@ class CustomPauseLayer: CustomShapeLayer, CustomDesignable {
 }
 
 
-class CustomStopLayer: CustomShapeLayer, CustomDesignable {
+class CustomStopLayer: CustomShapeLayer, LayerDesignable {
     
     override init(bounds: CGRect) {
         
@@ -78,12 +78,12 @@ class CustomStopLayer: CustomShapeLayer, CustomDesignable {
     
     func setupLayer() {
         
-        path = createCustomPath()
+        path = createCustomPathForDesing()
         fillColor = ColorStyle.text.color.cgColor
         
     }
     
-    func createCustomPath() -> CGPath {
+    func createCustomPathForDesing() -> CGPath {
         
         return CustomPath.rectangle(bounds).cgPath
         

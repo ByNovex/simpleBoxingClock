@@ -9,15 +9,27 @@
 import UIKit
 
 
-protocol CustomLayable {
+enum ButtonType {
     
-    func addLayerToSuperLayer()
-    func createLayer()
+    case stop
+    case pause
     
 }
 
+protocol ButtonDelegate {
+    
+    func buttonPressed(_ button: ButtonType)
+    
+}
 
-class PauseButton: CustomButton, CustomLayable {
+protocol ButtonLayable {
+    
+    func createLayer()
+    func addLayerToSuperLayer()
+    
+}
+
+class PauseButton: CustomButton, ButtonLayable {
     
     private var pauseLayer: CustomPauseLayer!
     
@@ -61,14 +73,13 @@ class PauseButton: CustomButton, CustomLayable {
     
     override func buttonIsPressed() {
         
-        print("------------PAUSE------------")
         delegate?.buttonPressed(.pause)
         
     }
  
 }
 
-class StopButton: CustomButton, CustomLayable {
+class StopButton: CustomButton, ButtonLayable {
     
     private var stopLayer: CustomStopLayer!
     
@@ -112,7 +123,6 @@ class StopButton: CustomButton, CustomLayable {
     
     override func buttonIsPressed() {
         
-        print("------------STOP------------")
         delegate?.buttonPressed(.stop)
         
     }
@@ -121,7 +131,7 @@ class StopButton: CustomButton, CustomLayable {
 
 class CustomButton: UIButton {
     
-    var delegate: ButtonPressedDelegate?
+    var delegate: ButtonDelegate?
     
     override init(frame: CGRect) {
         

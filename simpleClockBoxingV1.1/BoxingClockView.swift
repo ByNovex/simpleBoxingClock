@@ -22,12 +22,21 @@ enum TagView {
 }
 
 
+protocol BoxingClockDelegate {
+    
+    func buttonPauseIsPressed()
+    func buttonStopIsPressed()
+    
+}
 
-class BoxingClockView: UIView {
 
-    var buttonPause: PauseButton!
-    var buttonStop: StopButton!
-    var clockLabel: CustomLabel!
+class BoxingClockView: UIView, ButtonDelegate {
+    
+    var delegate: BoxingClockDelegate?
+
+    private var buttonPause: PauseButton!
+    private var buttonStop: StopButton!
+    private var clockLabel: CustomLabel!
     
     override init(frame: CGRect) {
         
@@ -42,23 +51,51 @@ class BoxingClockView: UIView {
         
     }
     
-    func setupView() {
+    
+    func getLabel() -> CustomLabel {
+        
+        return clockLabel
+        
+    }
+    
+    func buttonPressed(_ button: ButtonType) {
+        
+        switch button {
+            
+        case .stop:
+            delegate?.buttonStopIsPressed()
+        case .pause:
+            delegate?.buttonPauseIsPressed()
+            
+        }
+        
+    }
+    
+    private func setupView() {
         
         backgroundColor = ColorStyle.background.color
         setupObjects()
         
     }
     
-    func setupObjects() {
+    private func setupObjects() {
         
         buttonPause = GenericObjects.pauseButton(self)
         buttonStop = GenericObjects.stopButton(self)
         clockLabel = GenericObjects.clockLabel(self)
+        setupButtonDelegates()
         addToSuperView()
         
     }
     
-    func addToSuperView() {
+    private func setupButtonDelegates() {
+        
+        buttonPause.delegate = self
+        buttonStop.delegate = self
+        
+    }
+    
+   private func addToSuperView() {
         
         addSubview(buttonPause)
         addSubview(buttonStop)

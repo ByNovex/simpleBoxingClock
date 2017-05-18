@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CustomLabel: UILabel {
     
     override init(frame: CGRect) {
@@ -27,10 +28,9 @@ class CustomLabel: UILabel {
         
         backgroundColor = ColorStyle.secondBackground.color
         textColor = ColorStyle.text.color
-        text = "2:59:99"
         textAlignment = .center
         font = UIFont.systemFont(ofSize: 80)
-        adjustsFontForContentSizeCategory = true
+        //adjustsFontForContentSizeCategory = true
         layer.cornerRadius = 5
         clipsToBounds = true
         
