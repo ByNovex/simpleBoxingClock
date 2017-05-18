@@ -15,6 +15,9 @@
 		502BBB8C1ECCDC5700D24E36 /* simpleClockBoxingV1_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBB8B1ECCDC5700D24E36 /* simpleClockBoxingV1_1Tests.swift */; };
 		502BBB971ECCDC5700D24E36 /* simpleClockBoxingV1_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBB961ECCDC5700D24E36 /* simpleClockBoxingV1_1UITests.swift */; };
 		502BBBA51ECCDCBB00D24E36 /* BoxingClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBBA41ECCDCBB00D24E36 /* BoxingClockView.swift */; };
+		502BBBA71ECE035700D24E36 /* CustomShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBBA61ECE035700D24E36 /* CustomShapeLayer.swift */; };
+		502BBBA91ECE045B00D24E36 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBBA81ECE045B00D24E36 /* ColorStyle.swift */; };
+		502BBBAB1ECE04C400D24E36 /* CustomPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BBBAA1ECE04C400D24E36 /* CustomPath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		502BBB961ECCDC5700D24E36 /* simpleClockBoxingV1_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleClockBoxingV1_1UITests.swift; sourceTree = "<group>"; };
 		502BBB981ECCDC5700D24E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		502BBBA41ECCDCBB00D24E36 /* BoxingClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxingClockView.swift; sourceTree = "<group>"; };
+		502BBBA61ECE035700D24E36 /* CustomShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomShapeLayer.swift; sourceTree = "<group>"; };
+		502BBBA81ECE045B00D24E36 /* ColorStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
+		502BBBAA1ECE04C400D24E36 /* CustomPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				502BBB761ECCDC5700D24E36 /* AppDelegate.swift */,
 				502BBB781ECCDC5700D24E36 /* ViewController.swift */,
 				502BBBA41ECCDCBB00D24E36 /* BoxingClockView.swift */,
+				502BBBA61ECE035700D24E36 /* CustomShapeLayer.swift */,
+				502BBBA81ECE045B00D24E36 /* ColorStyle.swift */,
+				502BBBAA1ECE04C400D24E36 /* CustomPath.swift */,
 				502BBB7A1ECCDC5700D24E36 /* Main.storyboard */,
 				502BBB7D1ECCDC5700D24E36 /* Assets.xcassets */,
 				502BBB7F1ECCDC5700D24E36 /* LaunchScreen.storyboard */,
@@ -267,6 +276,9 @@
 			files = (
 				502BBB791ECCDC5700D24E36 /* ViewController.swift in Sources */,
 				502BBB771ECCDC5700D24E36 /* AppDelegate.swift in Sources */,
+				502BBBA71ECE035700D24E36 /* CustomShapeLayer.swift in Sources */,
+				502BBBAB1ECE04C400D24E36 /* CustomPath.swift in Sources */,
+				502BBBA91ECE045B00D24E36 /* ColorStyle.swift in Sources */,
 				502BBBA51ECCDCBB00D24E36 /* BoxingClockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +530,7 @@
 				502BBB9D1ECCDC5700D24E36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		502BBB9E1ECCDC5700D24E36 /* Build configuration list for PBXNativeTarget "simpleClockBoxingV1.1Tests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +539,7 @@
 				502BBBA01ECCDC5700D24E36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		502BBBA11ECCDC5700D24E36 /* Build configuration list for PBXNativeTarget "simpleClockBoxingV1.1UITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +548,7 @@
 				502BBBA31ECCDC5700D24E36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
