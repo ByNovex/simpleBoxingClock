@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+
+/**
+ Provides objects made for this particular app.
+ */
 struct GenericObjects {
     
     static let pauseButton: (UIView) -> PauseButton = { (onView: UIView) in

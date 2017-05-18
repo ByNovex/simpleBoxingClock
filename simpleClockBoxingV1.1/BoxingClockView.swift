@@ -21,7 +21,9 @@ enum TagView {
     }
 }
 
-
+/**
+ Tells if some button is pressed.
+ */
 protocol BoxingClockDelegate {
     
     func buttonPauseIsPressed()
@@ -80,11 +82,17 @@ class BoxingClockView: UIView, ButtonDelegate {
     
     private func setupObjects() {
         
+        createObjects()
+        setupButtonDelegates()
+        addToSuperView()
+        
+    }
+    
+    private func createObjects() {
+       
         buttonPause = GenericObjects.pauseButton(self)
         buttonStop = GenericObjects.stopButton(self)
         clockLabel = GenericObjects.clockLabel(self)
-        setupButtonDelegates()
-        addToSuperView()
         
     }
     
@@ -95,7 +103,7 @@ class BoxingClockView: UIView, ButtonDelegate {
         
     }
     
-   private func addToSuperView() {
+    private func addToSuperView() {
         
         addSubview(buttonPause)
         addSubview(buttonStop)

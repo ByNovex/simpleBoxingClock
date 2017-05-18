@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-
+/**
+ Provides *UIBezierPath* made for the buttons of this particular app.
+ */
 struct CustomPath {
     
     static let twoLines: (CGRect) -> UIBezierPath = { (bounds: CGRect) in

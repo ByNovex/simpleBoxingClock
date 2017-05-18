@@ -11,8 +11,8 @@ import UIKit
 
 protocol LayerDesignable {
     
-    func setupLayer()
     func createCustomPathForDesing() -> CGPath
+    func setupLayer()
     
 }
 
@@ -41,7 +41,7 @@ class CustomPauseLayer: CustomShapeLayer, LayerDesignable {
         
         path = createCustomPathForDesing()
         lineWidth = bounds.width / 10
-        strokeColor = ColorStyle.text.color.cgColor
+        strokeColor = ColorStyle.general.color.cgColor
         
     }
     
@@ -79,7 +79,7 @@ class CustomStopLayer: CustomShapeLayer, LayerDesignable {
     func setupLayer() {
         
         path = createCustomPathForDesing()
-        fillColor = ColorStyle.text.color.cgColor
+        fillColor = ColorStyle.general.color.cgColor
         
     }
     
@@ -90,7 +90,6 @@ class CustomStopLayer: CustomShapeLayer, LayerDesignable {
     }
     
 }
-
 
 class CustomShapeLayer: CAShapeLayer {
     

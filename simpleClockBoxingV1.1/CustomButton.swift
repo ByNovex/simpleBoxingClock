@@ -16,6 +16,9 @@ enum ButtonType {
     
 }
 
+/**
+ Tells when the button is pressed.
+ */
 protocol ButtonDelegate {
     
     func buttonPressed(_ button: ButtonType)
@@ -59,9 +62,9 @@ class PauseButton: CustomButton, ButtonLayable {
         
     }
     
-    internal override func changeColorWhenStopTouch() {
+    override func changeColorWhenStopTouch() {
         
-        pauseLayer.strokeColor = ColorStyle.text.color.cgColor
+        pauseLayer.strokeColor = ColorStyle.general.color.cgColor
         
     }
     
@@ -111,7 +114,7 @@ class StopButton: CustomButton, ButtonLayable {
     
     override func changeColorWhenStopTouch() {
         
-        stopLayer.fillColor = ColorStyle.text.color.cgColor
+        stopLayer.fillColor = ColorStyle.general.color.cgColor
         
     }
     

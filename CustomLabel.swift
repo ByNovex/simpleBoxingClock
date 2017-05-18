@@ -27,10 +27,9 @@ class CustomLabel: UILabel {
     func setupLabel() {
         
         backgroundColor = ColorStyle.secondBackground.color
-        textColor = ColorStyle.text.color
+        textColor = ColorStyle.general.color
         textAlignment = .center
         font = UIFont.systemFont(ofSize: 80)
-        //adjustsFontForContentSizeCategory = true
         layer.cornerRadius = 5
         clipsToBounds = true
         

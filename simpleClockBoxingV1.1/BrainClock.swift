@@ -8,13 +8,18 @@
 
 import Foundation
 
-
+/**
+ Tells when the time is updated.
+ */
 protocol ClockDelegate {
     
     func updatedTime()
     
 }
 
+/**
+ Provides the logical of boxingClock.
+ */
 class BrainClock {
     
     var time: String {
@@ -28,7 +33,8 @@ class BrainClock {
     private var milTime: Int
     private var secTime: Int
     private var minTime: Int
-    private var again: Bool
+    private var againPause: Bool
+    private var isBreak: Bool
     private var timer: Timer!
     
     init() {
@@ -36,7 +42,8 @@ class BrainClock {
         milTime = 0
         secTime = 0
         minTime = 0
-        again = false
+        isBreak = false
+        againPause = false
         
     }
     
@@ -58,15 +65,15 @@ class BrainClock {
     
     func pauseTime() {
         
-        if again {
+        if againPause {
             
             start()
-            again = false
+            againPause = false
             
         } else {
             
             timer.invalidate()
-            again = true
+            againPause = true
             
         }
         
@@ -84,24 +91,45 @@ class BrainClock {
     
     private func checkTime() {
         
+        checkMilTime()
+        checkSecTime()
+        checkMinTime()
+        
+    }
+    
+    private func checkMilTime() {
+        
         if milTime == 10 {
             secTime += 1
             milTime = 0
         }
+        
+    }
+    
+    private func checkSecTime() {
         
         if secTime == 60 {
             minTime += 1
             secTime = 0
         }
         
-        if minTime == 3 {
-            restartTime()
-        }
-        
     }
     
-    private func restartTime() {
+    private func checkMinTime() {
         
+        if isBreak {
+            if minTime == 1 {
+                stopTime()
+                minTime = 0
+                isBreak = false
+            }
+        } else {
+            if minTime == 3 {
+                stopTime()
+                minTime = 0
+                isBreak = true
+            }
+        }
         
     }
     
