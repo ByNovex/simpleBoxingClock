@@ -18,6 +18,7 @@ enum ColorStyle {
     case stopPressed
     
     var color: UIColor {
+        
         switch self {
         case .background:
             return UIColor(displayP3Red: 0x22/255, green: 0x28/255, blue: 0x31/255, alpha: 1.0)
@@ -28,8 +29,9 @@ enum ColorStyle {
         case .pausePressed:
             return UIColor(displayP3Red: 0x00/255, green: 0x92/255, blue: 0xCA/255, alpha: 1.0)
         case .stopPressed:
-            
             return UIColor(displayP3Red: 0xE8/255, green: 0x45/255, blue: 0x45/255, alpha: 1.0)
         }
+        
     }
+    
 }

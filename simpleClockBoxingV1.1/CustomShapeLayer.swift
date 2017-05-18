@@ -19,11 +19,22 @@ protocol CustomDesignable {
 class CustomPauseLayer: CustomShapeLayer, CustomDesignable {
     
     override init(bounds: CGRect) {
+        
         super.init(bounds: bounds)
+        setupLayer()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
+        
         super.init(coder: aDecoder)
+        
+    }
+    
+    override init(layer: Any) {
+        
+        super.init(layer: layer)
+        
     }
     
     func setupLayer() {
@@ -39,17 +50,29 @@ class CustomPauseLayer: CustomShapeLayer, CustomDesignable {
         return CustomPath.twoLines(bounds).cgPath
         
     }
+    
 }
 
 
 class CustomStopLayer: CustomShapeLayer, CustomDesignable {
     
     override init(bounds: CGRect) {
+        
         super.init(bounds: bounds)
+        setupLayer()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
+        
         super.init(coder: aDecoder)
+        
+    }
+    
+    override init(layer: Any) {
+        
+        super.init(layer: layer)
+        
     }
     
     
@@ -72,6 +95,7 @@ class CustomStopLayer: CustomShapeLayer, CustomDesignable {
 class CustomShapeLayer: CAShapeLayer {
     
     init(bounds: CGRect) {
+        
         super.init()
         self.frame = bounds
         self.bounds = bounds
@@ -79,11 +103,15 @@ class CustomShapeLayer: CAShapeLayer {
     }
     
     override init(layer: Any) {
+        
         super.init(layer: layer)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
+        
         super.init(coder: aDecoder)
+        
     }
 
 }

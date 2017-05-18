@@ -11,7 +11,6 @@ import UIKit
 
 struct CustomPath {
     
-    
     static let twoLines: (CGRect) -> UIBezierPath = { (bounds: CGRect) in
         
         let path = UIBezierPath()
@@ -32,8 +31,6 @@ struct CustomPath {
         
         return path
         
-        
     }
-    
     
 }
