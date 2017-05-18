@@ -10,17 +10,41 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var boxingClockView: BoxingClockView!
+    var boxingClockView: BoxingClockView! {
+        return createBoxingView()
+    }
 
     override func viewDidLoad() {
-        super.viewDidLoad()
         
-        boxingClockView = BoxingClockView(frame: self.view.frame)
+        super.viewDidLoad()
         self.view.addSubview(boxingClockView)
         
     }
-
-
+    
+    override func viewWillLayoutSubviews() {
+        
+        redrawView()
+        
+    }
+    
+    func createBoxingView() -> BoxingClockView {
+        
+        let newView = BoxingClockView(frame: self.view.frame)
+        newView.tag = TagView.main.value
+        
+        return newView
+        
+    }
+    
+    func redrawView() {
+        
+        if let view = self.view.viewWithTag(TagView.main.value) {
+            view.removeFromSuperview()
+            self.view.addSubview(boxingClockView)
+            
+        }
+        
+    }
 
 }
 
